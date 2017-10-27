@@ -1913,6 +1913,7 @@ static void do_init(fuse_req_t req, fuse_ino_t nodeid, const void *inarg)
 	LL_SET_DEFAULT(1, FUSE_CAP_ASYNC_DIO);
 	LL_SET_DEFAULT(1, FUSE_CAP_IOCTL_DIR);
 	LL_SET_DEFAULT(1, FUSE_CAP_ATOMIC_O_TRUNC);
+	LL_SET_DEFAULT(1, FUSE_CAP_SPLICE_WRITE);
 	LL_SET_DEFAULT(se->op.write_buf, FUSE_CAP_SPLICE_READ);
 	LL_SET_DEFAULT(se->op.getlk && se->op.setlk,
 		       FUSE_CAP_POSIX_LOCKS);
